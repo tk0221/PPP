@@ -1,0 +1,6 @@
+// The following should evaluate to 7.
+
+( \add : Integer -> Integer -> Integer . add 3 4 ) 
+(\x : Integer . \y : Integer . x + y ) 
+
+

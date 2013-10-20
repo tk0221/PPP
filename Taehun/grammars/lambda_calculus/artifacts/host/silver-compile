@@ -1,0 +1,7 @@
+#!/bin/bash
+
+WHAT_GRAMMAR_TO_BUILD=lambda_calculus:artifacts:host
+
+export GRAMMAR_PATH="../../../"
+
+silver $@ $WHAT_GRAMMAR_TO_BUILD

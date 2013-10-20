@@ -1,0 +1,5 @@
+// The following should evaluate to 15.
+
+ ( \x : Integer . x + 7 ) 8 
+
+

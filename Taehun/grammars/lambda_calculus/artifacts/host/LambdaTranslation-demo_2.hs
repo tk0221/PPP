@@ -1,0 +1,3 @@
+module LambdaTranslation where 
+
+value = ( ( \ add -> ( ( add ) ( 3 ) ) ( 4 ) ) ) ( ( \ x -> ( \ y -> ( x + y ) ) ) )
