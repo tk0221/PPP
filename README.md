@@ -4,3 +4,4 @@ Parallel Programming Project
 
 Description
 
+  1. n Body simulation with CUDA
