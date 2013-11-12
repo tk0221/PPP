@@ -1,0 +1,5 @@
+#include "../matrix.h"
+
+void main() {
+  matrix int m[4][17] = {i,j : i + j};
+}

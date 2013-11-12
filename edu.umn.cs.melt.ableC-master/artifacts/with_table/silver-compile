@@ -1,0 +1,8 @@
+#!/bin/bash
+
+WHAT_GRAMMAR_TO_BUILD=edu:umn:cs:melt:ableC:artifacts:with_table;
+
+export GRAMMAR_PATH="../../../"
+
+silver -o with_table.jar $@ $WHAT_GRAMMAR_TO_BUILD
+

@@ -1,0 +1,7 @@
+#!/bin/bash
+
+export GRAMMAR_PATH="../../../"
+silver -o ableC-with-tables.jar \
+       $@ \
+       edu:umn:cs:melt:exts:ableC:tables:mda
+

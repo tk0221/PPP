@@ -1,0 +1,19 @@
+
+We would like a the following boolean valued expression
+to translate to the C code that follows it.
+
+Note that if there are side effects in the table conditions, they may
+be executed more than once.
+
+
+  In
+      c = table (
+          e1 : T F,
+          e2 : F *,
+          e3 : T T );
+ 
+ table forwards to
+   
+   ({ int c1 = e1; int c2 = e2; int c3 = e3;
+      (c1 && ! c2 && c3) || ( ! c1 && 1 && c3 ) ; })
+
