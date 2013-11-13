@@ -1,0 +1,9 @@
+
+Currently, the only artifact is a "parse only" artifact.
+There is no explicit build script for this, but the testing scripts will build it.
+
+Try doing this:
+
+cd testing
+./runTests
+

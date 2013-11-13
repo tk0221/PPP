@@ -1,0 +1,3 @@
+#!/bin/bash
+
+rm *.jar *.c *~ *.gen_cpp *.mexout *.mexa64 build.xml

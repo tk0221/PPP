@@ -1,0 +1,16 @@
+
+matfun (double b[M][N]) = normalizecols(double a[M][N], double p /*= 2.0*/)
+{
+  for(int n = 0; n < N; n++) {
+    double colnorm = 0.0;
+    for(int m = 0; m < M; m++) {
+      colnorm += pow(index(a[m][n]), p);
+    }
+    colnorm = pow(colnorm, 1.0/p);
+    
+    for(int m = 0; m < M; m++) {
+      index(b[m][n]) = index(a[m][n]) / colnorm;
+    }
+  }
+}
+

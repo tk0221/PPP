@@ -1,0 +1,8 @@
+#include "../matrix.h"
+
+void main() {
+  matrix int m[10][20] = {i,j : 5};
+
+  matrix int n[6][5] = {i,j : 0};
+  n = index(m => 2::8, 13::18);
+}

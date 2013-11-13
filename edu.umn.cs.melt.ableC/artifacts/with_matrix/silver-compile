@@ -1,0 +1,8 @@
+#!/bin/bash
+
+WHAT_GRAMMAR_TO_BUILD=edu:umn:cs:melt:ableC:artifacts:with_matrix;
+
+export GRAMMAR_PATH="../../../"
+
+silver $@  $WHAT_GRAMMAR_TO_BUILD
+

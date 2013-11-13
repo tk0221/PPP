@@ -1,0 +1,17 @@
+# 1 "test.cx"
+# 1 "<built-in>" 1
+# 1 "<built-in>" 3
+# 161 "<built-in>" 3
+# 1 "<command line>" 1
+# 1 "<built-in>" 2
+# 1 "test.cx" 2
+
+typedef struct {
+  int low;
+  int high;
+} Interval;
+
+void main(int argc, char *argv[]) {
+  Interval i;
+}
+

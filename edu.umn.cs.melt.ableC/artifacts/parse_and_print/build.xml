@@ -1,0 +1,85 @@
+<project name='edu:umn:cs:melt:ableC:artifacts:parse_and_print' default='dist' basedir='.'>
+  <description>Generated build script for the grammar edu:umn:cs:melt:ableC:artifacts:parse_and_print</description>
+
+  <property environment='env'/>
+  <property name='jg' location='/Users/hoonkim/8980/silver/generated/'/>
+  <property name='sh' location='/Users/hoonkim/8980/silver/'/>
+  <property name='bin' location='${jg}/bin'/>
+  <property name='src' location='${jg}/src'/>
+
+  <path id='lib.classpath'>
+    <pathelement location='${sh}/jars/SilverRuntime.jar' />
+    <pathelement location='${sh}/jars/CopperRuntime.jar' />
+  </path>
+
+  <path id='compile.classpath'>
+    <pathelement location='${src}' />
+    <path refid='lib.classpath'/>
+    <pathelement location='${sh}/jars/CopperCompiler.jar' />
+  </path>
+
+  <taskdef name='copper' classname='edu.umn.cs.melt.copper.ant.CopperAntTask' classpathref='compile.classpath'/>
+
+  <target name='copper'>
+    <copper packageName='edu.umn.cs.melt.ableC.artifacts.parse_and_print' parserName='Parser_edu_umn_cs_melt_ableC_artifacts_parse_and_print_theParser' outputFile='${src}/edu/umn/cs/melt/ableC/artifacts/parse_and_print/Parser_edu_umn_cs_melt_ableC_artifacts_parse_and_print_theParser.java' useSkin='XML' warnUselessNTs='false' avoidRecompile='true' dump='ERROR_ONLY' dumpFormat='HTML' dumpFile='Parser_edu_umn_cs_melt_ableC_artifacts_parse_and_print_theParser.copperdump.html'>
+      <inputs file='${src}/edu/umn/cs/melt/ableC/artifacts/parse_and_print/Parser_edu_umn_cs_melt_ableC_artifacts_parse_and_print_theParser.copper'/>
+    </copper>
+  </target>
+
+  <target name='init'>
+    <tstamp>
+      <format property='TIME' pattern='yyyy.MM.dd.HH.mm.ss'/>
+    </tstamp>
+    <mkdir dir='${bin}'/>
+  </target>
+
+  <target name='dist' depends='jars'>
+  </target>
+
+  <target name='jars' depends='grammars'>
+    <pathconvert refid='lib.classpath' pathsep=' ' property='man.classpath' />
+    <jar destfile='edu.umn.cs.melt.ableC.artifacts.parse_and_print.jar' basedir='${bin}'>
+      <include name='silver/util/raw/treemap/*.class' />
+      <include name='silver/util/deque/*.class' />
+      <include name='edu/umn/cs/melt/ableC/abstractsyntax/env/*.class' />
+      <include name='silver/langutil/pp/*.class' />
+      <include name='edu/umn/cs/melt/ableC/abstractsyntax/*.class' />
+      <include name='silver/langutil/*.class' />
+      <include name='edu/umn/cs/melt/ableC/abstractsyntax/c11/*.class' />
+      <include name='edu/umn/cs/melt/ableC/abstractsyntax/gcc/*.class' />
+      <include name='edu/umn/cs/melt/ableC/drivers/parseAndPrint/*.class' />
+      <include name='edu/umn/cs/melt/ableC/concretesyntax/*.class' />
+      <include name='core/*.class' />
+      <include name='edu/umn/cs/melt/ableC/concretesyntax/cppTags/*.class' />
+      <include name='edu/umn/cs/melt/ableC/concretesyntax/c11/*.class' />
+      <include name='edu/umn/cs/melt/ableC/concretesyntax/gcc_exts/*.class' />
+      <include name='edu/umn/cs/melt/ableC/artifacts/parse_and_print/*.class' />
+      <manifest>
+        <attribute name='Built-By' value='${user.name}' />
+        <attribute name='Implementation-Version' value='${TIME}' />
+        <attribute name='Main-Class' value='edu.umn.cs.melt.ableC.artifacts.parse_and_print.Main' />
+        <attribute name='Class-Path' value='${man.classpath}' />
+      </manifest>
+    </jar>
+  </target>
+
+  <target name='grammars' depends='init, copper'>
+    <javac debug='on' classpathref='compile.classpath' srcdir='${src}' destdir='${bin}' includeantruntime='false'>
+      <include name='silver/util/raw/treemap/*.java' />
+      <include name='silver/util/deque/*.java' />
+      <include name='edu/umn/cs/melt/ableC/abstractsyntax/env/*.java' />
+      <include name='silver/langutil/pp/*.java' />
+      <include name='edu/umn/cs/melt/ableC/abstractsyntax/*.java' />
+      <include name='silver/langutil/*.java' />
+      <include name='edu/umn/cs/melt/ableC/abstractsyntax/c11/*.java' />
+      <include name='edu/umn/cs/melt/ableC/abstractsyntax/gcc/*.java' />
+      <include name='edu/umn/cs/melt/ableC/drivers/parseAndPrint/*.java' />
+      <include name='edu/umn/cs/melt/ableC/concretesyntax/*.java' />
+      <include name='core/*.java' />
+      <include name='edu/umn/cs/melt/ableC/concretesyntax/cppTags/*.java' />
+      <include name='edu/umn/cs/melt/ableC/concretesyntax/c11/*.java' />
+      <include name='edu/umn/cs/melt/ableC/concretesyntax/gcc_exts/*.java' />
+      <include name='edu/umn/cs/melt/ableC/artifacts/parse_and_print/*.java' />
+    </javac>
+  </target>
+</project>
