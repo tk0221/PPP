@@ -1,4 +1,0 @@
-#!/bin/bash
-
-silver -I ../.. --clean $@ edu:umn:cs:melt:exts:ableC:mex:ide
-

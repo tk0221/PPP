@@ -1,4 +1,0 @@
-#!/bin/bash
-
-silver -I ../.. -o ableC.jar $@ edu:umn:cs:melt:exts:ableC:mex:artifact
-

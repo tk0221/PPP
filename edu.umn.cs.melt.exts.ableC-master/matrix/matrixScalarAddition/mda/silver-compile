@@ -1,7 +1,0 @@
-#!/bin/bash
-
-export GRAMMAR_PATH="../../../../"
-silver -o ableC-mda.jar \
-       $@ \
-       edu:umn:cs:melt:exts:ableC:matrix:matrixScalarAddition:mda
-

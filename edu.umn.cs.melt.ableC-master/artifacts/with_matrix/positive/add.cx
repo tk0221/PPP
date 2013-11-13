@@ -1,9 +1,0 @@
-#include "../matrix.h"
-
-void main() {
-  matrix int m[10][20] = {i,j : 5};
-
-  matrix int n[10][20] = {i,j : 0};
-
-  n = m +m m;
-}

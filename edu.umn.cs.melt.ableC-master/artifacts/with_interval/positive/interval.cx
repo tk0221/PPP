@@ -1,5 +1,0 @@
-#include "../interval.h"
-
-void main() {
-  Interval a = 1 :: 10;
-}

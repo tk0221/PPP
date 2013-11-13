@@ -1,9 +1,0 @@
-
-typedef struct {
-  int low;
-  int high;
-} Interval;
-
-void main(int argc, char *argv[]) {
-  Interval i;
-}

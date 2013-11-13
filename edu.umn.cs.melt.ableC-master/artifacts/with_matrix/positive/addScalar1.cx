@@ -1,7 +1,0 @@
-#include "../matrix.h"
-
-void main() {
-  matrix int m[10][20] = {i,j : i + j};
-
-  m = m +s 2;
-}
