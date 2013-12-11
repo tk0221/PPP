@@ -1,9 +1,9 @@
 #include <stdio.h>
 
-__global__ void cube(float * d_out, float * d_in){
+__global__ void cube(int * d_out, int * d_in){
 	
     int idx = threadIdx.x;
-    float f = d_in[idx];
+    int f = d_in[idx];
     d_out[idx]=f*f*f;
 
     
@@ -11,18 +11,18 @@ __global__ void cube(float * d_out, float * d_in){
 
 int main(int argc, char ** argv) {
 	const int ARRAY_SIZE = 512;
-	const int ARRAY_BYTES = ARRAY_SIZE * sizeof(float);
+	const int ARRAY_BYTES = ARRAY_SIZE * sizeof(int);
 
 	// generate the input array on the host
-	float h_in[ARRAY_SIZE];
+	int h_in[ARRAY_SIZE];
 	for (int i = 0; i < ARRAY_SIZE; i++) {
-		h_in[i] = float(i);
+		h_in[i] = int(i);
 	}
-	float h_out[ARRAY_SIZE];
+	int h_out[ARRAY_SIZE];
 
 	// declare GPU memory pointers
-	float * d_in;
-	float * d_out;
+	int * d_in;
+	int * d_out;
 
 	// allocate GPU memory
 	cudaMalloc((void**) &d_in, ARRAY_BYTES);
@@ -39,7 +39,7 @@ int main(int argc, char ** argv) {
 
 	// print out the resulting array
 	for (int i =0; i < ARRAY_SIZE; i++) {
-		printf("%f", h_out[i]);
+		printf("%d", h_out[i]);
 		printf(((i % 4) != 3) ? "\t" : "\n");
 	}
 
