@@ -7,7 +7,7 @@ __global__ void add(int * d_out, int * d_in){
     d_out[idx]=f+f;
 
     
-}
+} //
 
 int main(int argc, char ** argv) {
 	const int ARRAY_SIZE = 64;
